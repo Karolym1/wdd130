@@ -8,5 +8,6 @@ diameter= float(input( "Enter the diameter of the wheel in inches (ex 15): " ))
 volume = (math.pi * (width ** 2) * aspect_ratio * (width * aspect_ratio + 2540 * diameter)) / 10000000000
 print(f"The approximate volume is {volume:.2f} litters")
 #Current date (without time)
-#Width, aspect ratio, diameter
-#Volume (rounded to 2 decimals)
+today = datetime.now()
+
+
