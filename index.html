@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karolina Lym | WDD 130</title>
+    <meta name="description" content="Karolina Lym — WDD130 home page. Course hub, assignments, and portfolio.">
+    <meta name="author" content="Karolina Lym">
+
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="#">Home</a>
+            <a href="index.html" aria-current="page">Home</a>
             <a href="wwr/">Rafting Website</a>
         </nav>
     </header>
@@ -20,15 +23,30 @@
         <h1>Karolina Lym | WDD 130</h1>
         <p>
             Welcome to WDD 130! This page will become my homepage for the course.
-            I love learning on this class. I can't wait to learn more
+            I love learning in this class and can't wait to learn more.
         </p>
 
-        <img src="images/profile.jpg" alt="It's me Karolina Lym" width="200">
+        <img src="images/profile.jpg" alt="It's me, Karolina Lym">
     </main>
 
+
+    <aside>
+        <h2>Utah, USA</h2>
+        <img src="images/utah.jpg" alt="A scenic view representing Utah, USA">
+        <p>
+            Utah is known for its stunning national parks, red rock formations,
+            and outdoor adventures. From the snow-covered mountains to the deserts of
+            Moab, it's a state full of natural beauty and variety.
+        </p>
+    </aside>
     <footer>
-        <p>© 2025 Karolina Lym</p>
+        <p>© <span id="year"></span> Karolina Lym</p>
     </footer>
+
+    <script>
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
