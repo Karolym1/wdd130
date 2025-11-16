@@ -134,8 +134,8 @@ main section {
 }
 
 .full-width-title {
-  width: 100vw;                    /* full screen width */
-  margin-left: calc(50% - 50vw);   /* pull out of 840px center */
+  width: 57.4vw;                    /* full screen width */
+  align-items: center;  /* pull out of 840px center */
   background-color: var(--secondary-color);
   color: white;
   text-align: center;
@@ -379,11 +379,13 @@ header nav a:hover {
 }
 .full-width-title {
   width: 50vw 50vw ;                    /* full screen width */
-  margin-left: calc(25% - 14.5vw);   /* pulls it out of the centered main */
+  margin-left: calc(25% - 10w);   /* pulls it out of the centered main */
   background-color: var(--secondary-color);
   color: white;
   text-align: center;
   padding: 20px 0;
+  
+
 }
 
                       
