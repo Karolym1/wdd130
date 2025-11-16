@@ -134,7 +134,7 @@ main section {
 }
 
 .full-width-title {
-  width: 57.4vw;                    /* full screen width */
+  width: 57.25vw;                    /* full screen width */
   align-items: center;  /* pull out of 840px center */
   background-color: var(--secondary-color);
   color: white;
