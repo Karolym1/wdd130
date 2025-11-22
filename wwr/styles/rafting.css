@@ -31,29 +31,30 @@ footer {
   margin: 0 auto;
 }
 
-/* HEADER LAYOUT */
+/* =========================
+   HEADER: GRID + FLEX NAV
+   ========================= */
 header {
-  display: flex;
-  flex-direction: column;      /* logo on top, nav under it */
-  align-items: flex-start;     /* keep everything left aligned */
+  display: grid;                      /* <-- GRID FOR HEADER */
+  grid-template-columns: auto 1fr;    /* logo | nav */
+  align-items: center;
   background-color: var(--primary-color);
   color: var(--accent2-color);
   padding: 16px;
 }
 
-/* LOGO */
+/* logo */
 header img {
-  height: 60px;   /* control logo size */
-  width: auto;    /* prevent stretching */
+  height: 60px;
+  width: auto;
   display: block;
 }
 
-/* NAVIGATION */
+/* nav: FLEXBOX HERE */
 header nav {
-  display: flex;
-  flex-direction: column;  /* vertical list of links */
-  gap: 4px;
-  margin-top: 10px;
+  display: flex;                      /* <-- FLEX FOR NAV */
+  justify-content: flex-end;          /* push links to the right */
+  gap: 16px;                          /* space between links */
 }
 
 header nav a {
@@ -66,14 +67,15 @@ header nav a:hover {
   text-decoration: underline;
 }
 
-/* HEADINGS */
+/* =========================
+   TEXT + GENERAL SPACING
+   ========================= */
 h1,
 h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
 }
 
-/* General spacing */
 nav,
 p,
 section,
@@ -82,7 +84,9 @@ article {
   padding: 8px;
 }
 
-/* HERO SECTION */
+/* =========================
+   HERO SECTION
+   ========================= */
 .hero {
   position: relative;
 }
@@ -121,282 +125,111 @@ article {
   border-radius: 4px;
 }
 
-/* SECTIONS (History, Adventure) */
+/* =========================
+   SECTIONS (History, Adventure)
+   ========================= */
 main section {
   background-color: #ffffff;
   border-radius: 4px;
 }
 
-/* Full-width blue bar for section titles */
+/* Optional title styling box */
 .info-box {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.full-width-title {
-  width: 57.25vw;                    /* full screen width */
-  align-items: center;  /* pull out of 840px center */
-  background-color: var(--secondary-color);
-  color: white;
-  text-align: center;
+  color: black;
   padding: 20px 0;
-}
-
-.full-width-title h2 {
-  margin: 0;
-  color: white;
-}
-
-.info-box p {
-  margin-top: 10px;
-}
-
-/* FOOTER */
-footer {
-  display: flex;
-  flex-direction: column;    /* text on top, icons under it */
-  align-items: flex-start;   /* left aligned */
-  padding: 16px;
-  background-color: var(--primary-color);
-  color: var(--accent2-color);
-  margin-top: 24px;
-}
-
-/* Social media icons */
-.socialmedia {
-  display: flex;
-  gap: 8px;
-  margin-top: 10px;
-}
-
-.socialmedia a {
-  text-decoration: none;
-}
-
-.socialmedia img {
-  width: 32px;
-  height: 32px;
-}
-
-/* 1. Color & font variables */
-:root {
-  --primary-color: #005f73;
-  --secondary-color: #0a9396;
-  --accent1-color: #001219;
-  --accent2-color: #e9d8a6;
-
-  --heading-font: "Georgia", "Times New Roman", serif;
-  --body-font: Arial, Helvetica, sans-serif;
-}
-
-/* 2. Reset box model */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: var(--body-font);
-  color: var(--accent1-color);
-  background-color: #f5f5f5;
-}
-
-/* Center header, main, footer and limit width */
-header,
-main,
-footer {
-  width: 840px;
-  margin: 0 auto;
-}
-
-/* Header layout */
-header {
-  display: flex;
-  align-items: left;
-  background-color: var(--primary-color);
-  color: var(--accent2-color);
-  padding: 16px;
-  flex-direction: column;
-
- 
-}
-
-header img {
-  height: 60px;
-  width: auto;
-}
-
-/* Navigation links in header */
-header nav a {
-  color: var(--accent2-color);
-  margin-left: 0;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-header nav a:hover {
-  text-decoration: underline;
-}
-
-h1,
-h2 {
-  font-family: var(--heading-font);
-  color: var(--primary-color);
-}
-
-nav,
-p,
-section,
-article {
-  margin: 16px;
-  padding: 8px;
-}
-
-.hero {
-  position: relative; /* allows children with absolute positioning */
-}
-
-.hero img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* Overlay heading */
-.hero h1 {
-  position: absolute;
-  top: 20px;
-  width: 100%;
-  padding: 16px;
   text-align: center;
-  opacity: 0.85;
-  background-color: var(--accent1-color);
-  color: #ffffff;
-}
-
-/* Overlay article box */
-.hero article {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 16px;
-  border-radius: 4px;
-}
-
-/* Image inside article */
-.hero article img {
-  float: right;
-  width: 125px;
-  margin-left: 12px;
-  border-radius: 4px;
-}
-
-/* Sections (History, Adventure) */
-main section {
-  background-color: #ffffff;
-  border-radius: 4px;
-}
-
-/* Footer */
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px;
-  background-color: var(--primary-color);
-  color: var(--accent2-color);
-  margin-top: 24px;
-}
-
-/* Remove underline from social media image links */
-.socialmedia a {
-  text-decoration: none;
-  margin-left: 8px;
-  
-}
-
-.socialmedia img {
-  width: 32px;
-  height: 32px;
-  
-  
-  
-}
-
-header img {
-  height: 60px;
-  
-}
-
-header nav a {
-  color: var(--accent2-color);
-  margin-left: 16px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-header nav a:hover {
-  text-decoration: underline;
-}
-
-.hero article {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 16px;
-  border-radius: 4px;
-}
-
-.hero article {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 16px;
-  border-radius: 4px;
-}
-.info-box {
-    
-    color:black;
-    padding:20px 0;
-    text-align: center;
-    margin:20px auto;
+  margin: 20px auto;
 }
 
 .info-box h2 {
-  background-color: var(--secondary-color); /* blue highlight */
-  color: white;                             /* white text */
-  display: inline-block;                    /* shrink box to text width */
+  background-color: var(--secondary-color);
+  color: white;
+  display: inline-block;
   padding: 10px 20px;
   border-radius: 10px;
   margin-bottom: 10px;
 }
-.full-width-title {
-  width: 50vw 50vw ;                    /* full screen width */
-  margin-left: calc(25% - 10w);   /* pulls it out of the centered main */
-  background-color: var(--secondary-color);
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  
 
+/* =========================
+   HISTORY SECTION LAYOUT
+   ========================= */
+/* assumes: <section class="history"> */
+.history {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* text | image */
+  gap: 16px;
+  margin: 16px;
+  padding: 16px;
 }
 
-                      
+.history img {
+  width: 100%;
+  border-radius: 4px;
+}
 
+/* =========================
+   ADVENTURES SECTION LAYOUT
+   ========================= */
+/* assumes: <section class="adventures"> */
+.adventures {
+  margin: 16px;
+  padding: 16px;
+}
 
+/* container around the 5 figures */
+.adventure-gallery {
+  display: flex;          /* FLEX to line up images */
+  gap: 12px;
+  flex-wrap: wrap;        /* wrap on small screens */
+  justify-content: space-between;
+}
 
+.adventure-gallery figure {
+  flex: 1 1 calc(20% - 12px);  /* 5 items across approx */
+  text-align: center;
+}
 
+.adventure-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
 
+.adventure-gallery figcaption {
+  margin-top: 4px;
+  font-size: 0.85rem;
+}
 
+/* =========================
+   FOOTER
+   ========================= */
+footer {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: var(--primary-color);
+  color: var(--accent2-color);
+  margin-top: 24px;
+}
 
+/* footer text on the left, icons on the right */
+footer p {
+  margin: 0;
+}
 
+/* SOCIAL ICONS TO THE RIGHT */
+.socialmedia {
+  margin-left: auto;   /* push to the right */
+  display: flex;
+  gap: 8px;
+}
 
+.socialmedia a {
+  text-decoration: none;
+}
 
+.socialmedia img {
+  width: 32px;
+  height: 32px;
+}
 
