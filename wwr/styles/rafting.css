@@ -31,9 +31,9 @@ footer {
   margin: 0 auto;
 }
 
-/* =========================
+/* 
    HEADER: GRID + FLEX NAV
-   ========================= */
+   */
 header {
   display: grid;                      /* <-- GRID FOR HEADER */
   grid-template-columns: auto 1fr;    /* logo | nav */
@@ -67,9 +67,9 @@ header nav a:hover {
   text-decoration: underline;
 }
 
-/* =========================
+/* 
    TEXT + GENERAL SPACING
-   ========================= */
+   */
 h1,
 h2 {
   font-family: var(--heading-font);
@@ -84,9 +84,9 @@ article {
   padding: 8px;
 }
 
-/* =========================
+/* 
    HERO SECTION
-   ========================= */
+   */
 .hero {
   position: relative;
 }
@@ -125,9 +125,9 @@ article {
   border-radius: 4px;
 }
 
-/* =========================
-   SECTIONS (History, Adventure)
-   ========================= */
+/*
+   SECTIONS (History, Adventure) */
+  
 main section {
   background-color: #ffffff;
   border-radius: 4px;
@@ -150,9 +150,9 @@ main section {
   margin-bottom: 10px;
 }
 
-/* =========================
+/* 
    HISTORY SECTION LAYOUT
-   ========================= */
+  */
 /* assumes: <section class="history"> */
 .history {
   display: grid;
@@ -167,9 +167,8 @@ main section {
   border-radius: 4px;
 }
 
-/* =========================
-   ADVENTURES SECTION LAYOUT
-   ========================= */
+/* 
+   ADVENTURES SECTION LAYOUT */
 /* assumes: <section class="adventures"> */
 .adventures {
   margin: 16px;
@@ -200,9 +199,9 @@ main section {
   font-size: 0.85rem;
 }
 
-/* =========================
+/* 
    FOOTER
-   ========================= */
+   */
 footer {
   display: flex;
   align-items: center;
