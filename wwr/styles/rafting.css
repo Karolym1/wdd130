@@ -231,3 +231,123 @@ footer p {
   height: 32px;
 }
 
+/* Contact page layout */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.company-info h2 {
+  margin-bottom: 0.5rem;
+}
+
+.company-info ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+}
+
+/* Map */
+.map iframe {
+  width: 100%;
+  max-width: 100%;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Employees */
+.employees {
+  margin-bottom: 3rem;
+}
+
+.employee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.employee-grid img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.employee-grid figcaption {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+/* Contact form */
+.contact-form form {
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-form fieldset {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+}
+
+.contact-form legend {
+  padding: 0 0.5rem;
+  font-weight: 700;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 0.75rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  font: inherit;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.contact-form button[type="submit"] {
+  align-self: flex-start;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  /* match these colors to your site's main button style */
+  background-color: #004c6d;
+  color: white;
+}
+
+.contact-form button[type="submit"]:hover {
+  filter: brightness(1.05);
+}
+
+/* Responsive tweak for smaller screens */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
