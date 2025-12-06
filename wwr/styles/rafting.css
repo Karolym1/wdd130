@@ -232,11 +232,20 @@ footer p {
 }
 
 /* Contact page layout */
-.contact-grid {
+.contact-layout {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1.2fr 1.5fr;
   gap: 2rem;
   margin-bottom: 3rem;
+  align-items: flex-start;
+}
+
+.company-info {
+  text-align: center;
+  margin: 16px;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 4px;
 }
 
 .company-info h2 {
@@ -281,8 +290,8 @@ footer p {
 
 /* Contact form */
 .contact-form form {
-  max-width: 600px;
-  margin: 0 auto 3rem auto;
+  width: 100%;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -336,7 +345,7 @@ footer p {
   border-radius: 4px;
   font-weight: 700;
   cursor: pointer;
-  /* match these colors to your site's main button style */
+
   background-color: #004c6d;
   color: white;
 }
@@ -347,7 +356,76 @@ footer p {
 
 /* Responsive tweak for smaller screens */
 @media (max-width: 768px) {
-  .contact-grid {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.newsletter{
+  margin: 16px;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.newsletter form{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+.newsletter label{
+  display: block;
+  font-weight: 600;
+}
+
+.newsletter input[type="text"],
+.newsletter input[type="email"]{
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+}
+
+/* Home page grid */
+.home-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 1.5rem;
+  margin: 16px;
+  padding: 16px;
+}
+
+.home-card,
+.cta-card {
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.home-card img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: #004c6d;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cta-button:hover {
+  filter: brightness(1.05);
+}
+
+@media (max-width: 768px) {
+  .home-grid {
     grid-template-columns: 1fr;
   }
 }
